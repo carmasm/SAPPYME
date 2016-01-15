@@ -35,5 +35,10 @@ namespace SAPPYME.Vistas.Maestros
 
             adpMaestros.Fill(dsSAPPYME, table);
         }
+
+        private void frmUnidadCap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

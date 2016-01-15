@@ -57,6 +57,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Font = new System.Drawing.Font("Arial", 10F);
             this.panel1.Location = new System.Drawing.Point(-5, 163);
@@ -104,6 +105,7 @@
             // 
             // sbGuardar
             // 
+            this.sbGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sbGuardar.Image = global::Framework.Properties.Resources.Guardar;
             this.sbGuardar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.sbGuardar.Location = new System.Drawing.Point(339, 126);
@@ -114,6 +116,7 @@
             // 
             // sbCancelar
             // 
+            this.sbCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.sbCancelar.Image = global::Framework.Properties.Resources.uncheck;
             this.sbCancelar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.sbCancelar.Location = new System.Drawing.Point(380, 126);

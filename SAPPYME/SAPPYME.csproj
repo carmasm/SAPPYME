@@ -96,6 +96,12 @@
     <Compile Include="Vistas\Maestros\frmMonedaLista.Designer.cs">
       <DependentUpon>frmMonedaLista.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Maestros\frmUnidadCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmUnidadCap.Designer.cs">
+      <DependentUpon>frmUnidadCap.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Maestros\frmMonedaLista.resx">
       <DependentUpon>frmMonedaLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmUnidadCap.resx">
+      <DependentUpon>frmUnidadCap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
