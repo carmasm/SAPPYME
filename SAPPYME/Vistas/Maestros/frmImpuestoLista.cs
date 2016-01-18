@@ -10,31 +10,32 @@ using System.Windows.Forms;
 
 namespace SAPPYME.Vistas.Maestros
 {
-    public partial class frmMonedaLista : Framework.frmBaseLista
+    public partial class frmImpuestoLista : Framework.frmBaseLista
     {
         frmMenuPrincipal MenuPrincipal;
-        public frmMonedaLista(frmMenuPrincipal frm, string table, string tableID, string title)
-      : base(table, tableID, title)
+        public frmImpuestoLista(frmMenuPrincipal frm, string table, string tableID, string title)
+            : base(table, tableID, title)
         {
             InitializeComponent();
-
+            
             MenuPrincipal = frm;
 
             Mtable = table;
             MtableID = tableID;
+        
         }
 
-        //Creo un nuevo moneda
+        //Creo un nuevo Impuesto
         private void sbNuevo_Click(object sender, EventArgs e)
         {
-            frmMonedaCap Cap = new frmMonedaCap(-1, Mtable, MtableID);
+            frmImpuestoCap Cap = new frmImpuestoCap(-1, Mtable, MtableID);
             Cap.ShowDialog();
 
             tblBaseGeneral.Clear();
             adpMaestros.Fill(tblBaseGeneral);
         }
 
-        //Edito Moneda
+        //Edito Impuesto
         private void sbEditar_Click(object sender, EventArgs e)
         {
             try
@@ -45,7 +46,7 @@ namespace SAPPYME.Vistas.Maestros
                     int row = (int)dgv.FocusedRowHandle;
 
 
-                    frmMonedaCap Cap = new frmMonedaCap(id, Mtable, MtableID);
+                    frmImpuestoCap Cap = new frmImpuestoCap(id, Mtable, MtableID);
                     Cap.ShowDialog();
 
                     tblBaseGeneral.Clear();
@@ -60,7 +61,7 @@ namespace SAPPYME.Vistas.Maestros
             }
             catch (Exception exEditar)
             {
-                ErrorSystem(exEditar.Message, Mtable, "frmMonedaLista: Actualizar Registro");
+                ErrorSystem(exEditar.Message, Mtable, "frmImpuestoLista: Actualizar Registro");
                 MostrarMsjXtraMessage("Error al Editar el Registro: " + exEditar.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -70,17 +71,17 @@ namespace SAPPYME.Vistas.Maestros
         {
             try
             {
-                frmVisualizador frmRpt = new frmVisualizador(MenuPrincipal, "Moneda");
+                frmVisualizador frmRpt = new frmVisualizador(MenuPrincipal, "Impuesto");
 
-                crBaseGeneral crMoneda = new crBaseGeneral();
+                crBaseGeneral crUnidad = new crBaseGeneral();
 
-                crMoneda.SetDataSource(tblReporte);
+                crUnidad.SetDataSource(tblReporte);
 
-                crMoneda.SetParameterValue("@Titulo", "Reporte General de Moneda");
+                crUnidad.SetParameterValue("@Titulo", "Reporte General de Impuesto");
 
-                frmRpt.crViewer.ReportSource = crMoneda;
+                frmRpt.crViewer.ReportSource = crUnidad;
 
-                MenuPrincipal.AddWindowX("Reporte de Moneda", frmRpt);
+                MenuPrincipal.AddWindowX("Reporte de Impuesto", frmRpt);
             }
             catch (Exception rep)
             {
@@ -94,7 +95,7 @@ namespace SAPPYME.Vistas.Maestros
             {
                 MenuPrincipal.xTabContenedor.TabPages.RemoveAt(MenuPrincipal.xTabContenedor.SelectedTabPageIndex);
                 this.Dispose();
-            }  
+            }
         }
     }
 }

@@ -84,6 +84,42 @@
     <Compile Include="Vistas\Configuracion\frmConfiguracion.Designer.cs">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Maestros\frmCategoriaCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmCategoriaCap.Designer.cs">
+      <DependentUpon>frmCategoriaCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmCategoriaLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmCategoriaLista.Designer.cs">
+      <DependentUpon>frmCategoriaLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmImpuestoCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmImpuestoCap.Designer.cs">
+      <DependentUpon>frmImpuestoCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmImpuestoLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmImpuestoLista.Designer.cs">
+      <DependentUpon>frmImpuestoLista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmMarcaCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmMarcaCap.Designer.cs">
+      <DependentUpon>frmMarcaCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmMarcaLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmMarcaLista.Designer.cs">
+      <DependentUpon>frmMarcaLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Maestros\frmMonedaCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +137,12 @@
     </Compile>
     <Compile Include="Vistas\Maestros\frmUnidadCap.Designer.cs">
       <DependentUpon>frmUnidadCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmUnidadLista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Maestros\frmUnidadLista.Designer.cs">
+      <DependentUpon>frmUnidadLista.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmMenuPrincipal.resx">
       <DependentUpon>frmMenuPrincipal.cs</DependentUpon>
@@ -126,6 +168,24 @@
     <EmbeddedResource Include="Vistas\Configuracion\frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmCategoriaCap.resx">
+      <DependentUpon>frmCategoriaCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmCategoriaLista.resx">
+      <DependentUpon>frmCategoriaLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmImpuestoCap.resx">
+      <DependentUpon>frmImpuestoCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmImpuestoLista.resx">
+      <DependentUpon>frmImpuestoLista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmMarcaCap.resx">
+      <DependentUpon>frmMarcaCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmMarcaLista.resx">
+      <DependentUpon>frmMarcaLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Maestros\frmMonedaCap.resx">
       <DependentUpon>frmMonedaCap.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Maestros\frmUnidadCap.resx">
       <DependentUpon>frmUnidadCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Maestros\frmUnidadLista.resx">
+      <DependentUpon>frmUnidadLista.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

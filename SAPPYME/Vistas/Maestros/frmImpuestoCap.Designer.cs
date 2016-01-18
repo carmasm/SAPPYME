@@ -1,6 +1,6 @@
 ﻿namespace SAPPYME.Vistas.Maestros
 {
-    partial class frmUnidadCap
+    partial class frmImpuestoCap
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.seUnidad = new DevExpress.XtraEditors.SpinEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.sePorcentaje = new DevExpress.XtraEditors.SpinEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seUnidad.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sePorcentaje.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -52,77 +52,73 @@
             // 
             this.txtCodigo.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.txtCodigo.Properties.Appearance.Options.UseFont = true;
-            this.txtCodigo.TabIndex = 0;
             // 
             // txtDescripcion
             // 
             this.txtDescripcion.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.txtDescripcion.Properties.Appearance.Options.UseFont = true;
-            this.txtDescripcion.TabIndex = 1;
             this.txtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescripcion_KeyPress);
             // 
             // sbCancelar
             // 
             this.sbCancelar.Location = new System.Drawing.Point(380, 157);
-            this.sbCancelar.TabIndex = 4;
             // 
             // sbGuardar
             // 
             this.sbGuardar.Location = new System.Drawing.Point(339, 157);
-            this.sbGuardar.TabIndex = 3;
             // 
             // skinForm
             // 
             this.skinForm.LookAndFeel.SkinName = "Office 2007 Blue";
             // 
-            // seUnidad
+            // labelControl3
             // 
-            this.seUnidad.EditValue = new decimal(new int[] {
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 10F);
+            this.labelControl3.Location = new System.Drawing.Point(13, 127);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(66, 16);
+            this.labelControl3.TabIndex = 118;
+            this.labelControl3.Text = "Porcentaje:";
+            // 
+            // sePorcentaje
+            // 
+            this.sePorcentaje.EditValue = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.seUnidad.Location = new System.Drawing.Point(104, 126);
-            this.seUnidad.Name = "seUnidad";
-            this.seUnidad.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10F);
-            this.seUnidad.Properties.Appearance.Options.UseFont = true;
-            this.seUnidad.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.sePorcentaje.Location = new System.Drawing.Point(104, 124);
+            this.sePorcentaje.Name = "sePorcentaje";
+            this.sePorcentaje.Properties.Appearance.Font = new System.Drawing.Font("Arial", 10F);
+            this.sePorcentaje.Properties.Appearance.Options.UseFont = true;
+            this.sePorcentaje.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.seUnidad.Properties.Increment = new decimal(new int[] {
+            this.sePorcentaje.Properties.Increment = new decimal(new int[] {
             50,
             0,
             0,
             131072});
-            this.seUnidad.Properties.Mask.EditMask = "0.00";
-            this.seUnidad.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.seUnidad.Properties.MaxValue = new decimal(new int[] {
+            this.sePorcentaje.Properties.Mask.EditMask = "0.00";
+            this.sePorcentaje.Properties.Mask.UseMaskAsDisplayFormat = true;
+            this.sePorcentaje.Properties.MaxValue = new decimal(new int[] {
             100,
             0,
             0,
             0});
-            this.seUnidad.Size = new System.Drawing.Size(106, 22);
-            this.seUnidad.TabIndex = 2;
-            this.seUnidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seUnidad_KeyPress);
+            this.sePorcentaje.Size = new System.Drawing.Size(106, 22);
+            this.sePorcentaje.TabIndex = 117;
+            this.sePorcentaje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sePorcentaje_KeyPress);
             // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Arial", 10F);
-            this.labelControl3.Location = new System.Drawing.Point(13, 129);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(82, 16);
-            this.labelControl3.TabIndex = 116;
-            this.labelControl3.Text = "Cantidad Und:";
-            // 
-            // frmUnidadCap
+            // frmImpuestoCap
             // 
             this.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(427, 217);
             this.Controls.Add(this.labelControl3);
-            this.Controls.Add(this.seUnidad);
-            this.Name = "frmUnidadCap";
-            this.Load += new System.EventHandler(this.frmUnidadCap_Load);
+            this.Controls.Add(this.sePorcentaje);
+            this.Name = "frmImpuestoCap";
+            this.Load += new System.EventHandler(this.frmImpuestoCap_Load);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.panel5, 0);
             this.Controls.SetChildIndex(this.labelControl1, 0);
@@ -131,12 +127,12 @@
             this.Controls.SetChildIndex(this.txtDescripcion, 0);
             this.Controls.SetChildIndex(this.sbCancelar, 0);
             this.Controls.SetChildIndex(this.sbGuardar, 0);
-            this.Controls.SetChildIndex(this.seUnidad, 0);
+            this.Controls.SetChildIndex(this.sePorcentaje, 0);
             this.Controls.SetChildIndex(this.labelControl3, 0);
             ((System.ComponentModel.ISupportInitialize)(this.txtCodigo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seUnidad.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sePorcentaje.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,7 +140,7 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.SpinEdit seUnidad;
         private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.SpinEdit sePorcentaje;
     }
 }

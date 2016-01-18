@@ -114,12 +114,27 @@ namespace SAPPYME
 
         private void bbiMoneda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            AddWindowX("Moneda", new frmMonedaLista(this, "Moneda", "MonedaID", "Listado de Moneda"));
+            AddWindowX("Moneda", new frmMonedaLista(this, "Moneda", "MonedaID", "Listado de Monedas"));
         }
 
         private void bbiUnidad_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            
+            AddWindowX("Unidad", new frmUnidadLista(this, "Unidad", "UnidadID", "Listado de Unidades"));
+        }
+
+        private void bbiImpuesto_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddWindowX("Impuesto", new frmImpuestoLista(this, "Impuesto", "ImpuestoID", "Listado de Impuestos"));
+        }
+
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddWindowX("Marca", new frmMarcaLista(this, "Marca", "MarcaID", "Listado de Marcas"));
+        }
+
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            AddWindowX("Impuesto", new frmCategoriaLista(this, "Categoria", "CategoriaID", "Listado de Categorias"));
         }
     }
 }

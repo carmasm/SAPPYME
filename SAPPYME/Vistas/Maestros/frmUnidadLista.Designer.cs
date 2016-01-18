@@ -1,6 +1,6 @@
 ﻿namespace SAPPYME.Vistas.Maestros
 {
-    partial class frmMonedaLista
+    partial class frmUnidadLista
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUnidadLista));
             ((System.ComponentModel.ISupportInitialize)(this.Icons)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).BeginInit();
             this.SuspendLayout();
@@ -67,18 +68,23 @@
             // 
             this.sbEditar.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.sbEditar.Appearance.Options.UseFont = true;
+            this.sbEditar.Click += new System.EventHandler(this.sbEditar_Click);
+            // 
+            // Icons
+            // 
+            this.Icons.Images.Add(((System.Drawing.Image)(resources.GetObject("Icons.Images"))));
             // 
             // skinForm
             // 
             this.skinForm.LookAndFeel.SkinName = "Office 2007 Blue";
             // 
-            // frmMonedaLista
+            // frmUnidadLista
             // 
             this.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(601, 540);
-            this.Name = "frmMonedaLista";
+            this.Name = "frmUnidadLista";
             ((System.ComponentModel.ISupportInitialize)(this.Icons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).EndInit();
             this.ResumeLayout(false);

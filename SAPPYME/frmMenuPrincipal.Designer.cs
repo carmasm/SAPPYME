@@ -66,6 +66,9 @@
             this.lblEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
             this.pbcProgreso = new DevExpress.XtraEditors.ProgressBarControl();
+            this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTabContenedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
@@ -122,9 +125,12 @@
             this.barButtonItem10,
             this.barButtonItem11,
             this.barButtonItem12,
-            this.barButtonItem13});
+            this.barButtonItem13,
+            this.barSubItem8,
+            this.barButtonItem1,
+            this.barButtonItem2});
             this.barManager1.MainMenu = this.MenuBar;
-            this.barManager1.MaxItemId = 29;
+            this.barManager1.MaxItemId = 32;
             // 
             // MenuBar
             // 
@@ -139,7 +145,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bCaja),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem2),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem5),
-            new DevExpress.XtraBars.LinkPersistInfo(this.bConfiguracion)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.bConfiguracion),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem8)});
             this.MenuBar.OptionsBar.AllowQuickCustomization = false;
             this.MenuBar.OptionsBar.DrawBorder = false;
             this.MenuBar.OptionsBar.MultiLine = true;
@@ -332,6 +339,7 @@
             this.bbiImpuesto.Caption = "Impuesto";
             this.bbiImpuesto.Id = 9;
             this.bbiImpuesto.Name = "bbiImpuesto";
+            this.bbiImpuesto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiImpuesto_ItemClick);
             // 
             // bbiMoneda
             // 
@@ -404,6 +412,29 @@
             this.pbcProgreso.Size = new System.Drawing.Size(106, 18);
             this.pbcProgreso.TabIndex = 15;
             // 
+            // barSubItem8
+            // 
+            this.barSubItem8.Caption = "Inventario";
+            this.barSubItem8.Id = 29;
+            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.barSubItem8.Name = "barSubItem8";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Marca";
+            this.barButtonItem1.Id = 30;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Categoria";
+            this.barButtonItem2.Id = 31;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
             // frmMenuPrincipal
             // 
             this.Appearance.Font = new System.Drawing.Font("Arial", 10F);
@@ -470,5 +501,8 @@
         private DevExpress.XtraEditors.LabelControl lblUsuario;
         public DevExpress.XtraTab.XtraTabControl xTabContenedor;
         public DevExpress.XtraEditors.ProgressBarControl pbcProgreso;
+        private DevExpress.XtraBars.BarSubItem barSubItem8;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem2;
     }
 }

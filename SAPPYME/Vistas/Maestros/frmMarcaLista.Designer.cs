@@ -1,6 +1,6 @@
 ﻿namespace SAPPYME.Vistas.Maestros
 {
-    partial class frmMonedaLista
+    partial class frmMarcaLista
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -67,18 +67,19 @@
             // 
             this.sbEditar.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.sbEditar.Appearance.Options.UseFont = true;
+            this.sbEditar.Click += new System.EventHandler(this.sbEditar_Click);
             // 
             // skinForm
             // 
             this.skinForm.LookAndFeel.SkinName = "Office 2007 Blue";
             // 
-            // frmMonedaLista
+            // frmMarcaLista
             // 
             this.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(601, 540);
-            this.Name = "frmMonedaLista";
+            this.Name = "frmMarcaLista";
             ((System.ComponentModel.ISupportInitialize)(this.Icons)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).EndInit();
             this.ResumeLayout(false);

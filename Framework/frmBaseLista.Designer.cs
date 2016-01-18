@@ -265,7 +265,6 @@
         private DevExpress.XtraEditors.GroupControl gcControles;
         public System.Windows.Forms.Panel panel2;
         public System.Windows.Forms.Panel panel1;
-        private DevExpress.XtraGrid.GridControl gcLista;
         public DevExpress.XtraGrid.Views.Grid.GridView dgv;
         private DevExpress.XtraGrid.Columns.GridColumn Codigo;
         private DevExpress.XtraGrid.Columns.GridColumn Descripcion;
@@ -278,5 +277,6 @@
         public DevExpress.XtraEditors.SimpleButton sbEditar;
         public DevExpress.XtraGrid.Columns.GridColumn ID;
         public DevExpress.XtraEditors.Controls.ImageSlider Icons;
+        public DevExpress.XtraGrid.GridControl gcLista;
     }
 }
