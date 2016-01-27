@@ -29,10 +29,10 @@ namespace SAPPYME
 
         public void AddWindowX(string title, DevExpress.XtraEditors.XtraForm forms)
         {
+            Cursor.Current = Cursors.WaitCursor;
+           
             try
-            {
-                ControlBar(pbcProgreso, "Cargando", 25);
-            
+            {                
                 bool add = true;
 
                 //Recorro el xtabContenedor para saber si ya existe un tab de ese nombre abierto
@@ -43,8 +43,7 @@ namespace SAPPYME
                     if (xTabContenedor.TabPages[x].Text == title)
                     {
 
-                        ControlBar(pbcProgreso, "Terminado", 100); 
-                    
+                        
                         xTabContenedor.TabPages[x].BackColor = Color.Azure;
                         xTabContenedor.SelectedTabPageIndex = x;
                         add = false;
@@ -53,16 +52,14 @@ namespace SAPPYME
                     //Si no existe un abierto "add" sera true
                     else
                     {
-                        ControlBar(pbcProgreso, "Cargando", 50); 
-                    
+                        
                         add = true;
                     }
                 }
 
                 if (add)
                 {
-                    ControlBar(pbcProgreso, "Cargando", 75); 
-
+                    
                     //Creo un XtraTabPage que sera el que contendra el formulario 
                     DevExpress.XtraTab.XtraTabPage myTabPage = new DevExpress.XtraTab.XtraTabPage();
 
@@ -78,14 +75,13 @@ namespace SAPPYME
                     xTabContenedor.TabPages.Add(myTabPage);
 
                     xTabContenedor.SelectedTabPageIndex = xTabContenedor.TabPages.Count - 1;
-
-                    ControlBar(pbcProgreso, "Terminado", 100); 
                 }
             }
             catch (Exception exAddWindowsX)
             {
                 ErrorSystem(exAddWindowsX.Message, "", "MenuPrincipal: AddWwindowX");
             }
+            Cursor.Current = Cursors.Default;
         }
 
         //Verifica si existe una cadena de Conexion valida
@@ -114,6 +110,7 @@ namespace SAPPYME
 
         private void bbiMoneda_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            
             AddWindowX("Moneda", new frmMonedaLista(this, "Moneda", "MonedaID", "Listado de Monedas"));
         }
 

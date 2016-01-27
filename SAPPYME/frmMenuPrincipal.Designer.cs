@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.xTabContenedor = new DevExpress.XtraTab.XtraTabControl();
-            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.barManager1 = new DevExpress.XtraBars.BarManager();
             this.MenuBar = new DevExpress.XtraBars.Bar();
             this.bArchivo = new DevExpress.XtraBars.BarSubItem();
             this.bbtnCambiarUsuario = new DevExpress.XtraBars.BarButtonItem();
@@ -59,20 +58,18 @@
             this.bbiUnidad = new DevExpress.XtraBars.BarButtonItem();
             this.bbiImpuesto = new DevExpress.XtraBars.BarButtonItem();
             this.bbiMoneda = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.lblEmpresa = new DevExpress.XtraEditors.LabelControl();
             this.lblUsuario = new DevExpress.XtraEditors.LabelControl();
-            this.pbcProgreso = new DevExpress.XtraEditors.ProgressBarControl();
-            this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTabContenedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbcProgreso.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // skinForm
@@ -348,6 +345,29 @@
             this.bbiMoneda.Name = "bbiMoneda";
             this.bbiMoneda.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbiMoneda_ItemClick);
             // 
+            // barSubItem8
+            // 
+            this.barSubItem8.Caption = "Inventario";
+            this.barSubItem8.Id = 29;
+            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
+            this.barSubItem8.Name = "barSubItem8";
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Marca";
+            this.barButtonItem1.Id = 30;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Caption = "Categoria";
+            this.barButtonItem2.Id = 31;
+            this.barButtonItem2.Name = "barButtonItem2";
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
+            // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -394,46 +414,11 @@
             this.lblUsuario.Appearance.Font = new System.Drawing.Font("Arial", 10F);
             this.lblUsuario.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.lblUsuario.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.lblUsuario.Location = new System.Drawing.Point(141, 368);
+            this.lblUsuario.Location = new System.Drawing.Point(0, 368);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(237, 30);
             this.lblUsuario.TabIndex = 10;
             this.lblUsuario.Text = "lblUsuario";
-            // 
-            // pbcProgreso
-            // 
-            this.pbcProgreso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pbcProgreso.Location = new System.Drawing.Point(12, 373);
-            this.pbcProgreso.MenuManager = this.barManager1;
-            this.pbcProgreso.Name = "pbcProgreso";
-            this.pbcProgreso.Properties.EditValueChangedDelay = 50;
-            this.pbcProgreso.Properties.NullText = "0";
-            this.pbcProgreso.ShowProgressInTaskBar = true;
-            this.pbcProgreso.Size = new System.Drawing.Size(106, 18);
-            this.pbcProgreso.TabIndex = 15;
-            // 
-            // barSubItem8
-            // 
-            this.barSubItem8.Caption = "Inventario";
-            this.barSubItem8.Id = 29;
-            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem2)});
-            this.barSubItem8.Name = "barSubItem8";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Marca";
-            this.barButtonItem1.Id = 30;
-            this.barButtonItem1.Name = "barButtonItem1";
-            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // barButtonItem2
-            // 
-            this.barButtonItem2.Caption = "Categoria";
-            this.barButtonItem2.Id = 31;
-            this.barButtonItem2.Name = "barButtonItem2";
-            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // frmMenuPrincipal
             // 
@@ -441,7 +426,6 @@
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.ClientSize = new System.Drawing.Size(621, 401);
-            this.Controls.Add(this.pbcProgreso);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.lblEmpresa);
             this.Controls.Add(this.xTabContenedor);
@@ -457,7 +441,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dsSAPPYME)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xTabContenedor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbcProgreso.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -500,7 +483,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
         private DevExpress.XtraEditors.LabelControl lblUsuario;
         public DevExpress.XtraTab.XtraTabControl xTabContenedor;
-        public DevExpress.XtraEditors.ProgressBarControl pbcProgreso;
         private DevExpress.XtraBars.BarSubItem barSubItem8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;

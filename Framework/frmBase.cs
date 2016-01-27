@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using DevExpress.XtraEditors;
+using DevExpress.XtraWaitForm;
 
 namespace Framework
 {
@@ -181,19 +182,9 @@ namespace Framework
         #endregion
 
         #region "Menu Principal"
-        public void ControlBar(DevExpress.XtraEditors.ProgressBarControl bar, string text, int value)
+        public void crearWait()
         {
-            bar.Properties.Step = 1;
-            bar.Properties.PercentView = true;
-            bar.Properties.Maximum = 100;
-            bar.Properties.Minimum = 0;
-            bar.Properties.EditValueChangedDelay = 50;
-            bar.Properties.ShowTitle = true;
             
-            bar.ToolTipTitle  = text + ": "+ value.ToString();
-            bar.EditValue = value;
-            bar.PerformStep();
-            bar.Update();
         }
         #endregion
     }
